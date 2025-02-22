@@ -1,3 +1,3 @@
 # Full server DOWNLOAD
-https://link-target.net/353897/downloadteste
+https://direct-link.net/353897/rankup-full-server-zip
 
