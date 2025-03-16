@@ -34,5 +34,14 @@
         "date": "2023-10-04",
         "image": "post2.jpg",
         "link": "https://link-target.net/353897/full-server-pvp"
+    },
+    {
+        "id": 5,
+        "title": "RP City (1.16+)",
+        "content": "Download RP City Full Server style!",
+        "category": "full-server",
+        "date": "2023-10-04",
+        "image": "post5.jpg",
+        "link": "https://link-target.net/353897/rp-city-full-server"
     }
 ]
