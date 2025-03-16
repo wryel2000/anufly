@@ -203,3 +203,17 @@ body {
     background-color: #666;
     transform: scale(1.05);
 }
+.minecraft-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Minecraft', sans-serif;
+    margin-top: 10px;
+}
+
+.minecraft-button:hover {
+    background-color: #45a049;
+}
