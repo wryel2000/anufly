@@ -60,3 +60,20 @@ function loadPost(postId) {
         })
         .catch(error => console.error('Erro ao carregar o post:', error));
 }
+function loadPost(postId) {
+    fetch('posts.json') // Carrega o arquivo JSON
+        .then(response => response.json())
+        .then(posts => {
+            const post = posts.find(p => p.id == postId); // Encontra o post pelo ID
+            if (post) {
+                document.getElementById('post-title').textContent = post.title;
+                document.getElementById('post-image').src = post.image;
+                document.getElementById('post-content').textContent = post.content;
+                document.getElementById('post-date').textContent = `Data: ${post.date}`;
+                document.getElementById('post-link').href = post.link; // Define o link do botão
+            } else {
+                console.error('Post não encontrado');
+            }
+        })
+        .catch(error => console.error('Erro ao carregar o post:', error));
+}
