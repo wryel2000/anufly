@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Post - Minecraft Universe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sky"></div>
+    <div class="clouds"></div>
+
+    <header class="minecraft-menu">
+        <h1>Visualizar Post</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="server-section">
+        <div class="block grass"></div>
+        <div class="content">
+            <h2 id="post-title"></h2>
+            <img id="post-image" src="" alt="Post Image" class="post-image">
+            <p id="post-content"></p>
+            <p id="post-date"></p>
+        </div>
+    </section>
+
+    <footer class="minecraft-footer">
+        <p>&copy; 2023 Minecraft Universe. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Carrega o post específico
+        const postId = new URLSearchParams(window.location.search).get('id');
+        loadPost(postId);
+    </script>
+</body>
+</html>
