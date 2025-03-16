@@ -5,7 +5,8 @@
         "content": "Confira o novo mod que adiciona dungeons incríveis ao Full Server!",
         "category": "full-server",
         "date": "2023-10-01",
-        "image": "post1.jpg"
+        "image": "post1.jpg",
+        "link": "https://exemplo.com/mod-exploracao"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "content": "Explore nosso novo mapa de parkour cheio de desafios!",
         "category": "worlds-maps",
         "date": "2023-10-02",
-        "image": "post2.jpg"
+        "image": "post2.jpg",
+        "link": "https://exemplo.com/mapa-parkour"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "content": "Baixe agora nosso pack de texturas em alta resolução!",
         "category": "pack",
         "date": "2023-10-03",
-        "image": "post3.jpg"
+        "image": "post3.jpg",
+        "link": "https://exemplo.com/pack-texturas"
     },
     {
         "id": 4,
@@ -29,6 +32,7 @@
         "content": "Participe do evento de sobrevivência no Full Server!",
         "category": "full-server",
         "date": "2023-10-04",
-        "image": "post4.jpg"
+        "image": "post4.jpg",
+        "link": "https://exemplo.com/evento-sobrevivencia"
     }
 ]
