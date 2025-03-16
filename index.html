@@ -3,48 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidores Minecraft</title>
+    <title>Minecraft Servers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Explorando Servidores Minecraft</h1>
+    <!-- Céu e nuvens -->
+    <div class="sky"></div>
+    <div class="clouds"></div>
+
+    <!-- Menu no estilo Minecraft -->
+    <header class="minecraft-menu">
+        <h1>Servidores Minecraft</h1>
+        <nav>
+            <ul>
+                <li><a href="#survival">Survival</a></li>
+                <li><a href="#creative">Creative</a></li>
+                <li><a href="#minigames">Minigames</a></li>
+                <li><a href="#hardcore">Hardcore</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="minecraft-section">
+    <!-- Seções de servidores -->
+    <section id="survival" class="server-section">
+        <div class="block grass"></div>
         <div class="content">
-            <h2>Servidor 1: Survival</h2>
-            <img src="survival.jpg" alt="Survival Server">
-            <p>Um servidor clássico de sobrevivência onde você pode construir, explorar e sobreviver contra mobs.</p>
+            <h2>Survival</h2>
+            <p>Lute para sobreviver em um mundo cheio de perigos e aventuras!</p>
         </div>
     </section>
 
-    <section class="minecraft-section">
+    <section id="creative" class="server-section">
+        <div class="block dirt"></div>
         <div class="content">
-            <h2>Servidor 2: Creative</h2>
-            <img src="creative.jpg" alt="Creative Server">
-            <p>Libere sua criatividade neste servidor onde você pode construir sem limites.</p>
+            <h2>Creative</h2>
+            <p>Construa livremente e solte sua imaginação!</p>
         </div>
     </section>
 
-    <section class="minecraft-section">
+    <section id="minigames" class="server-section">
+        <div class="block stone"></div>
         <div class="content">
-            <h2>Servidor 3: Minigames</h2>
-            <img src="minigames.jpg" alt="Minigames Server">
-            <p>Participe de diversos minigames divertidos com outros jogadores.</p>
+            <h2>Minigames</h2>
+            <p>Divirta-se com jogos rápidos e desafiantes!</p>
         </div>
     </section>
 
-    <section class="minecraft-section">
+    <section id="hardcore" class="server-section">
+        <div class="block cobblestone"></div>
         <div class="content">
-            <h2>Servidor 4: Hardcore</h2>
-            <img src="hardcore.jpg" alt="Hardcore Server">
-            <p>Para os mais corajosos, um servidor onde a morte é permanente.</p>
+            <h2>Hardcore</h2>
+            <p>Um mundo onde a morte é permanente. Você tem coragem?</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Explorando Servidores Minecraft</p>
+    <!-- Rodapé no estilo Minecraft -->
+    <footer class="minecraft-footer">
+        <p>&copy; 2023 Minecraft Servers. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
