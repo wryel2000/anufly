@@ -62,6 +62,28 @@ function loadPosts(category) {
                 postsList.appendChild(postElement);
             });
         });
+// Função para carregar posts filtrados por categoria
+function loadPosts(category) {
+    fetch('posts.json')
+        .then(response => response.json())
+        .then(posts => {
+            const filteredPosts = posts.filter(post => post.category === category);
+            const postsList = document.getElementById('posts-list');
+            postsList.innerHTML = '';
+
+            filteredPosts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.innerHTML = `
+                    <img src="${post.image}" alt="${post.title}">
+                    <h3>${post.title}</h3>
+                    <p>${post.date}</p>
+                    <a href="post-view.html?id=${post.id}" class="minecraft-button">Ler Mais</a>
+                `;
+                postsList.appendChild(postElement);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar posts:', error));
 }
 
 // Função para carregar um post específico
@@ -76,5 +98,6 @@ function loadPost(postId) {
                 document.getElementById('post-content').textContent = post.content;
                 document.getElementById('post-date').textContent = `Data: ${post.date}`;
             }
-        });
+        })
+        .catch(error => console.error('Erro ao carregar o post:', error));
 }
