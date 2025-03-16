@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worlds / Maps - Minecraft Universe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sky"></div>
+    <div class="clouds"></div>
+
+    <header class="minecraft-menu">
+        <h1>Worlds / Maps</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="server-section">
+        <div class="block dirt"></div>
+        <div class="content">
+            <h2>Posts de Worlds / Maps</h2>
+            <div id="posts-list" class="posts-list">
+                <!-- Posts serão carregados aqui -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="minecraft-footer">
+        <p>&copy; 2023 Minecraft Universe. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filtra posts por categoria
+        const category = "worlds-maps";
+        loadPosts(category);
+    </script>
+</body>
+</html>
