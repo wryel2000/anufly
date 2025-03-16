@@ -145,3 +145,41 @@ body {
     border-top: 5px solid #1a1a1a;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
 }
+/* Estilo da lista de posts */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.post h3 {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+.post p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+/* Estilo da página de visualização de post */
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
