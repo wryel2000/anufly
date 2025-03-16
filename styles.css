@@ -1,52 +1,130 @@
+/* Estilo global */
 body {
     font-family: 'Minecraft', sans-serif;
-    background-color: #1a1a1a;
-    color: #ffffff;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #7ec0ee; /* Cor do céu do Minecraft */
+}
+
+/* Céu e nuvens */
+.sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #7ec0ee 50%, #4b6c8c 100%);
+    z-index: -2;
+}
+
+.clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('clouds.png') repeat-x;
+    animation: move-clouds 60s linear infinite;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+@keyframes move-clouds {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+/* Menu no estilo Minecraft */
+.minecraft-menu {
+    background-color: #3b3b3b;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #2a2a2a;
+}
+
+.minecraft-menu h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+.minecraft-menu nav ul {
+    list-style: none;
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
+.minecraft-menu nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-h1 {
-    font-size: 3em;
-    margin: 0;
+.minecraft-menu nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-shadow: 1px 1px #000;
 }
 
-.minecraft-section {
-    padding: 50px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
+.minecraft-menu nav ul li a:hover {
+    color: #ffd700;
 }
 
-.minecraft-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #555;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #333;
-    padding: 10px;
+/* Seções de servidores */
+.server-section {
+    padding: 100px 20px;
     text-align: center;
     position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-bottom: 20px;
+}
+
+.server-section .block {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin: 0 auto 20px;
+}
+
+.server-section .grass {
+    background-image: url('grass_block.png');
+}
+
+.server-section .dirt {
+    background-image: url('dirt_block.png');
+}
+
+.server-section .stone {
+    background-image: url('stone_block.png');
+}
+
+.server-section .cobblestone {
+    background-image: url('cobblestone_block.png');
+}
+
+.server-section .content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.server-section h2 {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+.server-section p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* Rodapé no estilo Minecraft */
+.minecraft-footer {
+    background-color: #2a2a2a;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    border-top: 5px solid #1a1a1a;
 }
