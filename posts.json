@@ -19,12 +19,12 @@
     },
     {
         "id": 3,
-        "title": "Pack de Texturas 4K",
-        "content": "Baixe agora nosso pack de texturas em alta resolução!",
+        "title": "z50 Motor Cycle",
+        "content": "3D Model!",
         "category": "pack",
         "date": "2023-10-03",
         "image": "post4.jpg",
-        "link": "https://exemplo.com/pack-texturas"
+        "link": "https://link-target.net/353897/z50-motor"
     },
     {
         "id": 4,
@@ -51,6 +51,42 @@
         "category": "full-server",
         "date": "2023-10-04",
         "image": "post6.jpg",
+        "link": "https://link-target.net/353897/rpg-heros-premium-server"
+    },
+    {
+        "id": 7,
+        "title": "Trailblazer",
+        "content": "Download 3D Model!",
+        "category": "pack",
+        "date": "2023-10-04",
+        "image": "post7.jpg",
+        "link": "https://link-center.net/353897/trailblazer-minecraft"
+    },
+    {
+        "id": 8,
+        "title": "Wrangler jeep car",
+        "content": "Download 3D Car Model!",
+        "category": "pack",
+        "date": "2023-10-04",
+        "image": "post8.jpg",
+        "link": "https://link-hub.net/353897/wrangler"
+    },
+    {
+        "id": 9,
+        "title": "Saveiro volkswagem)",
+        "content": "Download 3D Model",
+        "category": "pack",
+        "date": "2023-10-04",
+        "image": "post9.jpg",
+        "link": "https://link-hub.net/353897/saveiro-minecraft"
+    },
+    {
+        "id": 10,
+        "title": "RPG 3D heroes (1.16+)",
+        "content": "Download RPG premium Full Server style!",
+        "category": "pack",
+        "date": "2023-10-04",
+        "image": "post10.jpg",
         "link": "https://link-target.net/353897/rpg-heros-premium-server"
     }
 ]
