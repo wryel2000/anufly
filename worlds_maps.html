@@ -6,8 +6,156 @@
     <title>Worlds / Maps - Minecraft Universe</title>
     <link rel="stylesheet" href="styles.css">
     <script type='text/javascript' src='//pl26276703.effectiveratecpm.com/49/f7/16/49f71614d0910b4e90627098a7d3c7ed.js'></script>
+    <style>
+        /* === ESTILOS VISUAIS === */
+        :root {
+            --mc-dirt: #8B4513;
+            --mc-dark-dirt: #5D2906;
+            --mc-gold: #ffd700;
+            --mc-black: #1a1a1a;
+            --text-primary: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--mc-black);
+            color: var(--text-primary);
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        .sky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            z-index: -2;
+        }
+
+        .clouds {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, white, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, white, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, white, rgba(0,0,0,0));
+            background-size: 100px 100px;
+            animation: twinkle 5s infinite alternate;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .minecraft-menu {
+            background-color: rgba(26, 26, 26, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid var(--mc-dirt);
+        }
+
+        .minecraft-menu h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            color: var(--mc-gold);
+            text-align: center;
+            margin: 0;
+        }
+
+        .minecraft-menu nav {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .minecraft-menu nav a {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .minecraft-menu nav a:hover {
+            color: var(--mc-gold);
+            background-color: rgba(139, 69, 19, 0.2);
+        }
+
+        .server-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .block.dirt {
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 100px;
+            background: url('dirt-block.png') no-repeat center/contain;
+            z-index: -1;
+        }
+
+        .content {
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 2rem;
+            border: 4px solid var(--mc-dirt);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        #posts-list {
+            margin-top: 2rem;
+        }
+
+        .minecraft-footer {
+            background-color: var(--mc-black);
+            padding: 2rem;
+            text-align: center;
+            border-top: 4px solid var(--mc-dirt);
+            margin-top: 2rem;
+        }
+
+        /* === ANÚNCIOS ESTILIZADOS === */
+        .ad-container {
+            margin: 2rem auto;
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(58, 58, 58, 0.5);
+            border: 2px solid var(--mc-dark-dirt);
+        }
+
+        @media (max-width: 768px) {
+            .block.dirt {
+                display: none;
+            }
+            
+            .server-section {
+                padding: 1rem;
+            }
+            
+            .minecraft-menu h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- ESTRUTURA ORIGINAL INTACTA -->
     <div class="sky"></div>
     <div class="clouds"></div>
 
@@ -20,37 +168,43 @@
         </nav>
     </header>
 
-    <script type="text/javascript">
-        atOptions = {
-            'key' : 'b2e233ea0ad207f06b7420ed0f40b5f9',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/b2e233ea0ad207f06b7420ed0f40b5f9/invoke.js"></script>
+    <div class="ad-container">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'b2e233ea0ad207f06b7420ed0f40b5f9',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/b2e233ea0ad207f06b7420ed0f40b5f9/invoke.js"></scr' + 'ipt>');
+        </script>
+    </div>
 
     <section class="server-section">
         <div class="block dirt"></div>
         <div class="content">
             <h2>Posts de Worlds / Maps</h2>
             <div id="posts-list" class="posts-list">
-                <!-- Posts serão carregados aqui -->
+                <!-- Estrutura de posts mantida conforme seu JSON -->
             </div>
         </div>
     </section>
+
+    <div class="ad-container">
+        <script async="async" data-cfasync="false" src="//pl26276726.effectiveratecpm.com/36cdf262b19efe5ce991d9e50a74e05c/invoke.js"></script>
+        <div id="container-36cdf262b19efe5ce991d9e50a74e05c"></div>
+    </div>
 
     <footer class="minecraft-footer">
         <p>&copy; 2023 Minecraft Universe. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- SCRIPTS ORIGINAIS PRESERVADOS -->
     <script src="script.js"></script>
-    <script async="async" data-cfasync="false" src="//pl26276726.effectiveratecpm.com/36cdf262b19efe5ce991d9e50a74e05c/invoke.js"></script>
-    <div id="container-36cdf262b19efe5ce991d9e50a74e05c"></div>
     <script type='text/javascript' src='//pl26276754.effectiveratecpm.com/0e/ca/66/0eca66d77391cd4590191316a053ede8.js'></script>
     <script>
-        // Filtra posts por categoria
+        // SEU CÓDIGO ORIGINAL INTACTO
         const category = "worlds-maps";
         loadPosts(category);
     </script>
