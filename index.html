@@ -3,85 +3,1085 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Universe</title>
-    <link rel="stylesheet" href="styles.css">
-<script type='text/javascript' src='//pl26276703.effectiveratecpm.com/49/f7/16/49f71614d0910b4e90627098a7d3c7ed.js'></script>
+    <meta name="description" content="Explore o universo de Minecraft com servidores completos, mapas exclusivos e pacotes incríveis">
+    <title>Minecraft Universe | Servidores Premium, Mapas e Packs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --mc-green: #5b8731;
+            --mc-dark-green: #3a5a1a;
+            --mc-brown: #8b4513;
+            --mc-gray: #7a7a7a;
+            --mc-dark-gray: #3a3a3a;
+            --mc-black: #1a1a1a;
+            --mc-gold: #ffd700;
+            --mc-red: #ff5555;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--mc-black);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        /* Efeito Parallax */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to bottom, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        
+        .pixel-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, white, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 40px 70px, white, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, white, rgba(0,0,0,0));
+            background-size: 100px 100px;
+            animation: twinkle 5s infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid var(--mc-green);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 1rem 0;
+            background-color: rgba(26, 26, 26, 0.95);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.8rem;
+            color: var(--mc-gold);
+            text-shadow: 3px 3px 0 var(--mc-dark-green), 
+                        6px 6px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo span {
+            color: var(--mc-green);
+        }
+        
+        /* Menu de Navegação */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--mc-gold);
+            background-color: rgba(91, 135, 49, 0.2);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--mc-gold);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--mc-gold);
+            text-shadow: 4px 4px 0 var(--mc-dark-green);
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* Minecraft Button */
+        .minecraft-button {
+            display: inline-block;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            padding: 1rem 2rem;
+            background-color: var(--mc-green);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 0;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+            box-shadow: 4px 4px 0 var(--mc-dark-green);
+            transform: translate(0, 0);
+            text-transform: uppercase;
+        }
+        
+        .minecraft-button:hover {
+            background-color: #6a9a3d;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--mc-dark-green);
+        }
+        
+        .minecraft-button:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--mc-dark-green);
+        }
+        
+        .minecraft-button.secondary {
+            background-color: var(--mc-gray);
+            box-shadow: 4px 4px 0 var(--mc-dark-gray);
+        }
+        
+        .minecraft-button.secondary:hover {
+            background-color: #8a8a8a;
+            box-shadow: 6px 6px 0 var(--mc-dark-gray);
+        }
+        
+        /* Seções */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .section-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--mc-gold);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--mc-green);
+        }
+        
+        .section-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .section-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .section-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid var(--mc-green);
+        }
+        
+        .section-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Seção Específicas */
+        #full-server {
+            background-color: rgba(26, 26, 26, 0.8);
+        }
+        
+        #worlds-maps {
+            background-color: rgba(58, 58, 58, 0.8);
+        }
+        
+        #pack {
+            background-color: rgba(26, 26, 26, 0.8);
+        }
+        
+        #about {
+            background-color: rgba(58, 58, 58, 0.8);
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background-color: rgba(26, 26, 26, 0.7);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--mc-green);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--mc-green);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--mc-gold);
+        }
+        
+        .feature-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 4rem 0;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: rgba(58, 58, 58, 0.7);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--mc-green);
+            margin: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--mc-green);
+        }
+        
+        .author-info h4 {
+            color: var(--mc-gold);
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: var(--mc-gray);
+            font-size: 0.8rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(91, 135, 49, 0.2) 0%, rgba(26, 26, 26, 0.9) 100%);
+            position: relative;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('minecraft-pattern.png') repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--mc-gold);
+        }
+        
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--mc-black);
+            padding: 3rem 2rem 1.5rem;
+            border-top: 4px solid var(--mc-green);
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            color: var(--mc-gold);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: var(--mc-gold);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--mc-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--mc-green);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--mc-dark-gray);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Efeitos Especiais */
+        .pixel-creeper {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('creeper-pixel.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .minecraft-block {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            animation: spin 20s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .section-image {
+                order: -1;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .minecraft-button {
+                width: 100%;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            
+            nav a {
+                display: block;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animações de Scroll */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.left {
+            transform: translateX(-50px);
+        }
+        
+        .fade-in.right {
+            transform: translateX(50px);
+        }
+        
+        .fade-in.up {
+            transform: translateY(50px);
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    </style>
 </head>
 <body>
-    <!-- Céu e nuvens -->
-    <div class="sky"></div>
-    <div class="clouds"></div>
-
-    <!-- Menu no estilo Minecraft -->
-    <header class="minecraft-menu">
-        <h1>Minecraft Universe</h1>
-        <nav>
-            <ul>
-                <li><a href="#full-server">Full Server</a></li>
-                <li><a href="#worlds-maps">Worlds / Maps</a></li>
-                <li><a href="#pack">Pack</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+    <!-- Background Parallax -->
+    <div class="parallax-bg">
+        <div class="pixel-stars"></div>
+        <div class="pixel-creeper" style="top: 20%; left: 10%;"></div>
+        <div class="pixel-creeper" style="top: 70%; left: 80%;"></div>
+        <div class="minecraft-block" style="top: 30%; left: 85%; background-image: url('diamond-block.png');"></div>
+        <div class="minecraft-block" style="top: 80%; left: 15%; background-image: url('gold-block.png');"></div>
+    </div>
+    
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">MINECRAFT<span>UNIVERSE</span></a>
+            
+            <button class="mobile-menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#full-server">Servidores</a></li>
+                    <li><a href="#worlds-maps">Mapas</a></li>
+                    <li><a href="#pack">Packs</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'b2e233ea0ad207f06b7420ed0f40b5f9',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/b2e233ea0ad207f06b7420ed0f40b5f9/invoke.js"></script>
-    <!-- Seções -->
-    <section id="full-server" class="server-section">
-        <div class="block grass"></div>
-        <div class="content">
-            <h2>Full Server</h2>
-            <p>All plugins/maps config!</p>
-            <img src="full_server.jpg" alt="Full Server">
-            <a href="full_server.html" class="minecraft-button">click</a>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CONSTRUA, EXPLORE, SOBREVIVA NO <span style="color: var(--mc-green);">MELHOR SERVIDOR</span> DE MINECRAFT</h1>
+            <p>Junte-se a milhares de jogadores em uma experiência única com mods exclusivos, mapas incríveis e uma comunidade vibrante.</p>
+            
+            <div class="hero-buttons">
+                <a href="#full-server" class="minecraft-button">Jogar Agora</a>
+                <a href="#features" class="minecraft-button secondary">Ver Recursos</a>
+            </div>
         </div>
     </section>
-
-    <section id="worlds-maps" class="server-section">
-        <div class="block dirt"></div>
-        <div class="content">
-            <h2>Worlds / Maps</h2>
-            <p>Download.</p>
-            <img src="worlds_maps.jpg" alt="Worlds / Maps">
-            <a href="worlds_maps.html" class="minecraft-button">click</a>
+    
+    <!-- Features Section -->
+    <section id="features" class="fade-in up">
+        <div class="section-container">
+            <div class="section-content">
+                <h2 class="section-title">RECURSOS EXCLUSIVOS</h2>
+                <p class="section-text">Nosso servidor oferece uma experiência completa com tudo que você precisa para aproveitar ao máximo o universo Minecraft.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card fade-in left">
+                        <div class="feature-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="feature-title">100% ONLINE</h3>
+                        <p class="feature-text">Servidores 24/7 com uptime de 99.9% e proteção contra lag e DDoS.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in up">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">COMUNIDADE</h3>
+                        <p class="feature-text">Mais de 50.000 jogadores ativos e uma equipe de moderadores dedicada.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in right">
+                        <div class="feature-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h3 class="feature-title">MAPAS ÚNICOS</h3>
+                        <p class="feature-text">Mundos customizados criados por nossa equipe de builders profissionais.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in left">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">ANTI-CHEAT</h3>
+                        <p class="feature-text">Sistema avançado de detecção de hacks para garantir um jogo justo.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in up">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">MODS EXCLUSIVOS</h3>
+                        <p class="feature-text">Plugins desenvolvidos especialmente para melhorar sua experiência.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in right">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">EVENTOS</h3>
+                        <p class="feature-text">Competições semanais com prêmios incríveis para os melhores jogadores.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section id="pack" class="server-section">
-        <div class="block stone"></div>
-        <div class="content">
-            <h2>Pack</h2>
-            <p>packs.</p>
-            <img src="pack.jpg" alt="Pack">
-            <a href="pack.html" class="minecraft-button">click</a>
+    
+    <!-- Full Server Section -->
+    <section id="full-server" class="fade-in">
+        <div class="section-container">
+            <div class="section-content">
+                <h2 class="section-title">SERVIDOR COMPLETO</h2>
+                <p class="section-text">Tudo configurado e pronto para jogar! Nosso servidor inclui todos os plugins necessários para uma experiência perfeita, com moderação ativa e suporte 24/7.</p>
+                
+                <ul style="list-style-type: none; margin: 1.5rem 0;">
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--mc-green); margin-right: 0.5rem;"></i> Survival, Creative, Skyblock e modos especiais</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--mc-green); margin-right: 0.5rem;"></i> Economia integrada com lojas e sistema de ranks</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--mc-green); margin-right: 0.5rem;"></i> Proteção de construções e áreas privadas</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: var(--mc-green); margin-right: 0.5rem;"></i> Atualizações semanais com novos recursos</li>
+                </ul>
+                
+                <a href="full_server.html" class="minecraft-button">Ver Detalhes do Servidor</a>
+            </div>
+            
+            <div class="section-image fade-in right">
+                <img src="full_server.jpg" alt="Servidor Completo de Minecraft" loading="lazy">
+            </div>
         </div>
     </section>
-
-    <section id="about" class="server-section">
-        <div class="block cobblestone"></div>
-        <div class="content">
-            <h2>About</h2>
-            <p>Conheça mais sobre o projeto e a equipe por trás do Minecraft Universe.</p>
-            <img src="about.jpg" alt="About">
-            <a href="about.html" class="minecraft-button">click</a>
+    
+    <!-- Worlds/Maps Section -->
+    <section id="worlds-maps" class="fade-in">
+        <div class="section-container">
+            <div class="section-image fade-in left">
+                <img src="worlds_maps.jpg" alt="Mapas e Mundos de Minecraft" loading="lazy">
+            </div>
+            
+            <div class="section-content">
+                <h2 class="section-title">MUNDOS E MAPAS</h2>
+                <p class="section-text">Explore centenas de mapas customizados, desde aventuras épicas até desafios extremos. Todos disponíveis para download gratuito.</p>
+                
+                <div style="margin: 1.5rem 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span>Mapas de Aventura</span>
+                        <span>150+</span>
+                    </div>
+                    <div style="height: 10px; background-color: var(--mc-dark-gray); border-radius: 5px;">
+                        <div style="width: 90%; height: 100%; background-color: var(--mc-green); border-radius: 5px;"></div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; margin: 0.5rem 0;">
+                        <span>Parkour e Desafios</span>
+                        <span>80+</span>
+                    </div>
+                    <div style="height: 10px; background-color: var(--mc-dark-gray); border-radius: 5px;">
+                        <div style="width: 75%; height: 100%; background-color: var(--mc-green); border-radius: 5px;"></div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; margin: 0.5rem 0;">
+                        <span>Construções Épicas</span>
+                        <span>200+</span>
+                    </div>
+                    <div style="height: 10px; background-color: var(--mc-dark-gray); border-radius: 5px;">
+                        <div style="width: 95%; height: 100%; background-color: var(--mc-green); border-radius: 5px;"></div>
+                    </div>
+                </div>
+                
+                <a href="worlds_maps.html" class="minecraft-button">Explorar Mapas</a>
+            </div>
         </div>
     </section>
-
-    <!-- Rodapé no estilo Minecraft -->
-    <footer class="minecraft-footer">
-        <p>&copy; 2023 Minecraft Universe. Todos os direitos reservados.</p>
+    
+    <!-- Pack Section -->
+    <section id="pack" class="fade-in">
+        <div class="section-container">
+            <div class="section-content">
+                <h2 class="section-title">PACOTES EXCLUSIVOS</h2>
+                <p class="section-text">Melhore sua experiência visual com nossos pacotes de texturas e shaders otimizados, desenvolvidos especialmente para nosso servidor.</p>
+                
+                <div style="margin: 1.5rem 0;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="fas fa-check-circle" style="color: var(--mc-green); font-size: 1.5rem; margin-right: 1rem;"></i>
+                        <div>
+                            <h4 style="color: var(--mc-gold);">Texture Pack HD</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Texturas em 64x64 com estilo único</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="fas fa-check-circle" style="color: var(--mc-green); font-size: 1.5rem; margin-right: 1rem;"></i>
+                        <div>
+                            <h4 style="color: var(--mc-gold);">Shaders Otimizados</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Efeitos visuais incríveis sem lag</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="color: var(--mc-green); font-size: 1.5rem; margin-right: 1rem;"></i>
+                        <div>
+                            <h4 style="color: var(--mc-gold);">Sound Pack</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Efeitos sonoros imersivos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="pack.html" class="minecraft-button">Baixar Packs</a>
+            </div>
+            
+            <div class="section-image fade-in right">
+                <img src="pack.jpg" alt="Pacotes de Minecraft" loading="lazy">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials fade-in">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">O QUE DIZEM NOSSOS JOGADORES</h2>
+        
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p class="testimonial-text">"O melhor servidor de Minecraft que já joguei! A comunidade é incrível e os eventos mantêm o jogo sempre fresco e divertido."</p>
+                <div class="testimonial-author">
+                    <img src="player1.jpg" alt="Jogador 1" class="author-avatar">
+                    <div class="author-info">
+                        <h4>NotchFan123</h4>
+                        <p>Jogador há 2 anos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"Adoro os mapas customizados! Cada aventura é única e bem elaborada. A equipe realmente se esforça para criar conteúdo de qualidade."</p>
+                <div class="testimonial-author">
+                    <img src="player2.jpg" alt="Jogador 2" class="author-avatar">
+                    <div class="author-info">
+                        <h4>DiamondMiner</h4>
+                        <p>Builder Oficial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <div class="section-container">
+            <div class="section-image fade-in left">
+                <img src="about.jpg" alt="Sobre o Minecraft Universe" loading="lazy">
+            </div>
+            
+            <div class="section-content">
+                <h2 class="section-title">SOBRE NÓS</h2>
+                <p class="section-text">Minecraft Universe nasceu da paixão por criar a melhor experiência possível para os fãs de Minecraft. Desde 2015, nossa equipe trabalha incansavelmente para oferecer servidores estáveis, conteúdo exclusivo e uma comunidade acolhedora.</p>
+                
+                <div style="display: flex; gap: 2rem; margin: 2rem 0;">
+                    <div style="text-align: center;">
+                        <div style="font-family: 'Press Start 2P', cursive; font-size: 2rem; color: var(--mc-gold);">50K+</div>
+                        <div style="color: var(--text-secondary);">Jogadores</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-family: 'Press Start 2P', cursive; font-size: 2rem; color: var(--mc-gold);">300+</div>
+                        <div style="color: var(--text-secondary);">Mapas</div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-family: 'Press Start 2P', cursive; font-size: 2rem; color: var(--mc-gold);">24/7</div>
+                        <div style="color: var(--text-secondary);">Suporte</div>
+                    </div>
+                </div>
+                
+                <a href="about.html" class="minecraft-button">Conheça a Equipe</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section fade-in">
+        <div class="cta-content">
+            <h2 class="cta-title">PRONTO PARA COMEÇAR?</h2>
+            <p class="cta-text">Junte-se a milhares de jogadores e descubra por que Minecraft Universe é o servidor mais amado pela comunidade.</p>
+            
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                <a href="#full-server" class="minecraft-button" style="background-color: var(--mc-gold); box-shadow: 4px 4px 0 #b8860b;">Jogar Agora</a>
+                <a href="#contact" class="minecraft-button secondary">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">MINECRAFT UNIVERSE</div>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">O melhor servidor de Minecraft com conteúdo exclusivo e uma comunidade vibrante.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>LINKS</h3>
+                <ul>
+                    <li><a href="#full-server">Servidores</a></li>
+                    <li><a href="#worlds-maps">Mapas</a></li>
+                    <li><a href="#pack">Packs</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>RECURSOS</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Tutoriais</a></li>
+                    <li><a href="#">Regras</a></li>
+                    <li><a href="#">Loja</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>CONTATO</h3>
+                <ul>
+                    <li><a href="mailto:contato@minecraftuniverse.com"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> Email</a></li>
+                    <li><a href="#"><i class="fab fa-discord" style="margin-right: 0.5rem;"></i> Discord</a></li>
+                    <li><a href="#"><i class="fas fa-headset" style="margin-right: 0.5rem;"></i> Suporte</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Minecraft Universe. Não afiliado à Mojang ou Microsoft. Todos os direitos reservados.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
-    <script async="async" data-cfasync="false" src="//pl26276726.effectiveratecpm.com/36cdf262b19efe5ce991d9e50a74e05c/invoke.js"></script>
-<div id="container-36cdf262b19efe5ce991d9e50a74e05c"></div>
-<script type='text/javascript' src='//pl26276754.effectiveratecpm.com/0e/ca/66/0eca66d77391cd4590191316a053ede8.js'></script>
+    
+    <script>
+        // Menu Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        
+        menuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+        
+        // Scroll Header Effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll Animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
